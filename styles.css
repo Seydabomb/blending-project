@@ -1,0 +1,46 @@
+body {
+	margin: 1em 0; /* Space between */
+	background: black; /* Black background */
+}
+
+/* =============== Zoomed In Barn =============== */
+.three_pic_barn {
+	background: url("img/268px-CMYK_separation_no_black.jpg") top left,
+		url("img/268px-CMYK_separation_no_black.jpg") center center,
+		url("img/268px-CMYK_separation_no_black.jpg") bottom right;
+	height: 200px;
+}
+.three_pic_barn:hover {
+	background-position: top center, center center, bottom center;
+}
+
+/* =============== Zoomed Out Barn =============== */
+
+.four_pic_barn {
+	background: url("img/201px-CMYK_separation_maximum_black.jpg") top left,
+		url("img/201px-CMYK_separation_maximum_black.jpg") 402px 303px,
+		url("img/201px-CMYK_separation_maximum_black.jpg") 201px -150px,
+		url("img/201px-CMYK_separation_maximum_black.jpg") bottom right;
+	background-size: 25% 400%;
+	height: 150px;
+}
+.four_pic_barn:hover {
+	background-position: top center, center 303px, center -150px, bottom center;
+}
+
+/* =============== Blending for Both =============== */
+
+.three_pic_barn,
+.four_pic_barn {
+	margin: 0.25rem auto;
+	width: 804px;
+	background-blend-mode: multiply;
+	background-color: white;
+	background-repeat: repeat-y;
+	transition: 0.25s 0.5s;
+	border-radius: 0.25rem;
+}
+.three_pic_barn:hover,
+.four_pic_barn:hover {
+	transition: 1.5s 0;
+}
